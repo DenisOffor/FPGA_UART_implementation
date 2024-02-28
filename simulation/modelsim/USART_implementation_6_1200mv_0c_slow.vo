@@ -1,0 +1,229 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+
+// DATE "02/28/2024 08:27:47"
+
+// 
+// Device: Altera EP4CE6E22C6 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module UART_RX_tb (
+	Received_byte,
+	receive_state,
+	error);
+output 	[7:0] Received_byte;
+output 	receive_state;
+output 	error;
+
+// Design Ports Information
+// Received_byte[0]	=>  Location: PIN_39,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[1]	=>  Location: PIN_67,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[2]	=>  Location: PIN_42,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[3]	=>  Location: PIN_43,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[4]	=>  Location: PIN_66,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[5]	=>  Location: PIN_70,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[6]	=>  Location: PIN_50,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Received_byte[7]	=>  Location: PIN_104,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// receive_state	=>  Location: PIN_86,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// error	=>  Location: PIN_53,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("USART_implementation_6_1200mv_0c_v_slow.sdo");
+// synopsys translate_on
+
+wire \Received_byte[0]~output_o ;
+wire \Received_byte[1]~output_o ;
+wire \Received_byte[2]~output_o ;
+wire \Received_byte[3]~output_o ;
+wire \Received_byte[4]~output_o ;
+wire \Received_byte[5]~output_o ;
+wire \Received_byte[6]~output_o ;
+wire \Received_byte[7]~output_o ;
+wire \receive_state~output_o ;
+wire \error~output_o ;
+
+
+// Location: IOOBUF_X1_Y0_N16
+cycloneive_io_obuf \Received_byte[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[0]~output .bus_hold = "false";
+defparam \Received_byte[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X30_Y0_N23
+cycloneive_io_obuf \Received_byte[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[1]~output .bus_hold = "false";
+defparam \Received_byte[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X3_Y0_N2
+cycloneive_io_obuf \Received_byte[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[2]~output .bus_hold = "false";
+defparam \Received_byte[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X5_Y0_N23
+cycloneive_io_obuf \Received_byte[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[3]~output .bus_hold = "false";
+defparam \Received_byte[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X28_Y0_N2
+cycloneive_io_obuf \Received_byte[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[4]~output .bus_hold = "false";
+defparam \Received_byte[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X32_Y0_N23
+cycloneive_io_obuf \Received_byte[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[5]~output .bus_hold = "false";
+defparam \Received_byte[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X13_Y0_N2
+cycloneive_io_obuf \Received_byte[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[6]~output .bus_hold = "false";
+defparam \Received_byte[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y18_N2
+cycloneive_io_obuf \Received_byte[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Received_byte[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Received_byte[7]~output .bus_hold = "false";
+defparam \Received_byte[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y9_N2
+cycloneive_io_obuf \receive_state~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\receive_state~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \receive_state~output .bus_hold = "false";
+defparam \receive_state~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N2
+cycloneive_io_obuf \error~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\error~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \error~output .bus_hold = "false";
+defparam \error~output .open_drain_output = "false";
+// synopsys translate_on
+
+assign Received_byte[0] = \Received_byte[0]~output_o ;
+
+assign Received_byte[1] = \Received_byte[1]~output_o ;
+
+assign Received_byte[2] = \Received_byte[2]~output_o ;
+
+assign Received_byte[3] = \Received_byte[3]~output_o ;
+
+assign Received_byte[4] = \Received_byte[4]~output_o ;
+
+assign Received_byte[5] = \Received_byte[5]~output_o ;
+
+assign Received_byte[6] = \Received_byte[6]~output_o ;
+
+assign Received_byte[7] = \Received_byte[7]~output_o ;
+
+assign receive_state = \receive_state~output_o ;
+
+assign error = \error~output_o ;
+
+endmodule

@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/denlo/Documents/Quartus/USART_implementation/UART_RX.v
+source_file = 1, C:/Users/denlo/Documents/Quartus/USART_implementation/UART_RX_tb.v
+source_file = 1, C:/Users/denlo/Documents/Quartus/USART_implementation/db/USART_implementation.cbx.xml
+design_name = UART_RX_tb
+instance = comp, \Received_byte[0]~output , Received_byte[0]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[1]~output , Received_byte[1]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[2]~output , Received_byte[2]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[3]~output , Received_byte[3]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[4]~output , Received_byte[4]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[5]~output , Received_byte[5]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[6]~output , Received_byte[6]~output, UART_RX_tb, 1
+instance = comp, \Received_byte[7]~output , Received_byte[7]~output, UART_RX_tb, 1
+instance = comp, \receive_state~output , receive_state~output, UART_RX_tb, 1
+instance = comp, \error~output , error~output, UART_RX_tb, 1
